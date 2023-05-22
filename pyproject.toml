@@ -1,0 +1,17 @@
+[tool.poetry]
+authors = ["meterglost <nguyenhv@vng.com.vn>"]
+description = ""
+name = "Burp Extension"
+readme = "README.md"
+version = "0.1.0"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+burp = "^1.27"
+
+[tool.black]
+line-length = 200
+
+[build-system]
+build-backend = "poetry.core.masonry.api"
+requires = ["poetry-core"]

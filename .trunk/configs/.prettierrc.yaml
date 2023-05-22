@@ -1,0 +1,9 @@
+overrides:
+  - files:
+      - "*.json"
+    options:
+      tabWidth: 4
+  - files:
+      - "*.html"
+    options:
+      tabWidth: 4

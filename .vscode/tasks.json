@@ -1,0 +1,55 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "command": "rm -rf out/* && cp -r src/* out/ && cd toolkit && poetry run python converter.py",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "presentation": {
+                "clear": true,
+                "reveal": "silent"
+            }
+        },
+        {
+            "label": "test",
+            "type": "shell",
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "command": "",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "presentation": {
+                "clear": true,
+                "reveal": "silent"
+            }
+        },
+        {
+            "label": "release",
+            "type": "shell",
+            "group": {
+                "kind": "build"
+            },
+            "dependsOn": ["build"],
+            "command": "7zr a -t7z dist.7z out config",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "presentation": {
+                "clear": true,
+                "reveal": "silent"
+            }
+        }
+    ]
+}

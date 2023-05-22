@@ -1,0 +1,10 @@
+{
+    "editor.defaultFormatter": "trunk.io",
+    "editor.formatOnSave": true,
+    "files.insertFinalNewline": true,
+    "python.terminal.activateEnvironment": false,
+    "path-autocomplete.triggerOutsideStrings": true,
+    "path-autocomplete.pathMappings": {
+        "${workspaceFolder}": "${workspace}"
+    }
+}

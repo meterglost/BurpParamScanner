@@ -1,0 +1,10 @@
+FROM python:3-slim
+
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends curl=* procps=* git=* git-lfs=* p7zip=* nodejs=* \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pip install --no-cache-dir pre-commit==3.3.2 poetry==1.4.2
+
+RUN curl https://get.trunk.io -fsSL -o install.sh && bash install.sh && rm install.sh
