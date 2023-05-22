@@ -1,0 +1,15 @@
+# Cache
+**/__pycache__/
+**/*$py.class
+
+# Build
+**/*.7z
+**/*.zip
+out/
+
+# Test
+test/
+**/test.py
+
+# Other
+poetry.lock

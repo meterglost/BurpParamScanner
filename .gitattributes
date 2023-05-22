@@ -1,0 +1,15 @@
+* text=auto eol=lf
+
+.gitattributes  text
+.gitignore      text
+
+# Documentation
+README.md       text diff=markdown  linguist-documentation
+LICENSE         text                linguist-documentation
+
+# Code
+*.py            text diff=python    linguist-language=Python
+*.json          text                linguist-language=JSON-with-Comments
+*.toml          text                linguist-language=TOML
+*.yaml          text                linguist-language=YAML
+Dockerfile.dev  text                linguist-language=Dockerfile

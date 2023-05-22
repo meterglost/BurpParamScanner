@@ -1,0 +1,26 @@
+select = [
+  "I",
+  "F",
+  "E",
+  "C90",
+  "N",
+  "D",
+  "UP",
+  "ANN",
+  "BLE",
+  "A",
+  "ICN",
+  "Q",
+  "RSE",
+  "RET",
+  "PTH",
+  "PD",
+]
+ignore = ["D202", "D212", "D401", "E501", "N802"]
+
+unfixable = ["F401"]
+
+[flake8-import-conventions.aliases]
+numpy = "np"
+pandas = "pd"
+scipy = "sp"
